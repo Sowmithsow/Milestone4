@@ -1,0 +1,29 @@
+pipeline{
+	agent any
+	
+	tools{
+		maven 'Maven3'
+	}
+	
+	stages{
+		
+		stage('Checkout'){
+			steps{
+				git branch:'master',
+				url:'https://github.com/Sowmithsow/Milestone4.git'
+			}
+		}
+		
+		stage('Build'){
+			steps{
+				bat 'mvn clean compile'
+			}
+		}
+		
+		stage('Test'){
+			steps{
+				bat 'mvn test'
+			}
+		}
+	}
+}

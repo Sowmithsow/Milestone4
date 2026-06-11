@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="BaseClass.BaseTest">
+        <methods>
+          <include name="close"/>
+          <include name="setup"/>
+          <include name="Login" invocation-numbers="0 1 2"/>
+          <include name="Add_to_Cart"/>
+          <include name="Search_Product"/>
+        </methods>
+      </class> <!-- BaseClass.BaseTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
