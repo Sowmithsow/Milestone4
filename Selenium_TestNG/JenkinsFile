@@ -16,14 +16,18 @@ pipeline{
 		
 		stage('Build'){
 			steps{
+                dir('Selenium_TestNG'){
 				bat 'mvn clean compile'
 			}
 		}
+}
 		
 		stage('Test'){
 			steps{
+              dir('Selenium_TestNG'){
 				bat 'mvn test'
 			}
 		}
+}
 	}
 }
